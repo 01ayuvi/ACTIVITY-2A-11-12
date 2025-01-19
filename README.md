@@ -133,70 +133,155 @@
 </body>
 </html>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Activity 12 - Web Design</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>My Thematic Web Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #fbd3d3;
+    }
+    header {
+      background: #bdcaed;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      background: #333;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+    }
+    nav a {
+      color: rgb(241, 246, 212);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    article, section, aside {
+      padding: 20px;
+    }
+    section {
+      margin: 20px auto;
+      width: 80%;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    aside {
+      background: #f9f9f9;
+      margin: 20px;
+      padding: 20px;
+      border-left: 4px solid #4CAF50;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+    footer form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+    footer form input, footer form textarea {
+      width: 80%;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    footer form input[type="submit"] {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    footer form input[type="submit"]:hover {
+      background: #45a049;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <h1>Welcome to My Themed Website</h1>
-    <p>This website is all about showcasing assignments and creativity with a structured design.</p>
+    <h1>Welcome to My Thematic Web Page</h1>
+    <p>Discover exciting content and more!</p>
   </header>
 
+  <!-- Navigation -->
   <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#navigation">Navigation</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#contact">Contact Us</a></li>
-    </ul>
+    <a href="#home">Home</a>
+    <a href="#navigation">Navigation</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact Us</a>
   </nav>
 
-  <main>
-    <section id="home">
-      <h2>Home Page</h2>
-      <p>This is the homepage where you can find a brief description of the theme and purpose of this website. The theme focuses on learning and implementing web design concepts.</p>
-    </section>
+  <!-- Home Page -->
+  <section id="home">
+    <article>
+      <h2>About My Theme</h2>
+      <p>
+        This website is designed to explore various web development concepts and showcase activities. You can navigate to different sections, view blogs with multimedia, and reach out to us through the Contact Us page.
+      </p>
+    </article>
+  </section>
 
-    <section id="navigation">
-      <h2>Navigation Page</h2>
-      <p>Below are the activities listed from Assignment 1A, 1B, and 1C:</p>
+  <!-- Navigation Page -->
+  <section id="navigation">
+    <article>
+      <h2>Navigation</h2>
+      <p>Here is the list of activities from Assignment 1A, 1B, and 1C:</p>
       <ul>
-        <li>Activity 1A: Understanding HTML Basics</li>
-        <li>Activity 1B: Adding CSS for Styling</li>
-        <li>Activity 1C: Building a Responsive Layout</li>
+        <li><a href="assign1.html">Activity 1</a></li>
+        <li><a href="act2.html">Activity 2</a></li>
+        <li><a href="act3.html">Activity 3</a></li>
+        <!-- Add more links as needed -->
       </ul>
-    </section>
+    </article>
+  </section>
 
-    <section id="blog">
-      <h2>Blog Page</h2>
-      <p>Check out some photos, videos, and hyperlinks below:</p>
-      <ul>
-        <li><a href="https://example.com/photo-gallery" target="_blank">Photo Gallery</a></li>
-        <li><a href="https://example.com/video-tutorial" target="_blank">Video Tutorial</a></li>
-        <li><a href="https://example.com/resources" target="_blank">Useful Resources</a></li>
-      </ul>
-    </section>
-  </main>
+  <!-- Blog Page -->
+  <section id="blog">
+    <article>
+      <h2>Blog</h2>
+      <p>Check out some interesting photos and videos:</p>
+      <div>
+        <img src="background.jpg" alt="Sample Photo 1" style="width:50%; margin: auto; display: block; border-radius:8px;">
+      </div>
+      <div>
+        <video controls style="width:100%; margin-top:20px;">
+          <source src="mp4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p>Visit <a href="https://example.com" target="_blank">this website</a> for more inspiration.</p>
+    </article>
+  </section>
 
+  <!-- Contact Us -->
   <footer id="contact">
     <h2>Contact Us</h2>
-    <form action="submit_form.php" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit">Submit</button>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send">
     </form>
+    <p>© 2025 My Thematic Web Page</p>
   </footer>
-</body>
-</html>
+
